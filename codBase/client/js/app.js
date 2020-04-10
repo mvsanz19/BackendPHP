@@ -1,11 +1,8 @@
 
-
-
 class EventsManager {
     constructor() {
         this.obtenerDataInicial()
     }
-
 
     obtenerDataInicial() {
         let url = '../server/getEvents.php'
@@ -27,8 +24,7 @@ class EventsManager {
           error: function(){
             alert("error en la comunicación con el servidor");
           }
-        })
-
+         });
     }
 
     poblarCalendario(eventos) {
@@ -110,9 +106,6 @@ class EventsManager {
               })
             }
 
-
-
-
           }else {
             alert(data.msg)
           }
@@ -125,7 +118,6 @@ class EventsManager {
     }
 
     eliminarEvento(event, jsEvent){
-
       var form_data = new FormData()
       form_data.append('id', event.id)
       $.ajax({
